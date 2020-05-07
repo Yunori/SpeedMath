@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light">
+
+
+    <TextView
+        android:id="@+id/gameOverTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="GAME OVER"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintBottom_toTopOf="@+id/gameOverScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/gameOverScore"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="GAME OVER"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintBottom_toTopOf="@+id/gameOverCorrect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameOverTitle" />
+
+
+    <TextView
+        android:id="@+id/gameOverCorrect"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="GAME OVER"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintBottom_toTopOf="@+id/gameOverMsg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameOverScore" />
+
+
+    <TextView
+        android:id="@+id/gameOverMsg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="GAME OVER"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintBottom_toTopOf="@+id/fowardFromGameOver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameOverCorrect" />
+
+
+    <Button
+        android:id="@+id/fowardFromGameOver"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="returnToMain"
+        android:soundEffectsEnabled="false"
+        android:text="DONE"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameOverMsg" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

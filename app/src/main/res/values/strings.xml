@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">Reflex Math</string>
-    <string name="title_activity_main2">Main2Activity</string>
+    <string name="app_name">SpeedMath</string>
+    <string name="highscore">HIGH SCORE </string>
+    <string name="lvl">lvl</string>
+    <string name="score">SCORE</string>
+    <string name="correct">CORRECT</string>
 </resources>

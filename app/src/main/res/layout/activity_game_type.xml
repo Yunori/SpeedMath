@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light">
+
+
+    <TextView
+        android:id="@+id/typeLbl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:layout_marginBottom="@dimen/_24sdp"
+        android:gravity="center"
+        android:text="CHOOSE A GAME TYPE"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintBottom_toTopOf="@+id/forwardFromType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/forwardFromType"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="toSettings"
+        android:soundEffectsEnabled="false"
+        android:tag="0"
+        android:text="CHALLENGE"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintBottom_toTopOf="@+id/descLbl1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeLbl" />
+
+
+    <TextView
+        android:id="@+id/descLbl1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:gravity="center"
+        android:text="5 SECONDS BETWEEN QUESTIONS, X2 POINTS"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintBottom_toTopOf="@+id/forwardFromType1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forwardFromType" />
+
+
+    <Button
+        android:id="@+id/forwardFromType1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="toSettings"
+        android:soundEffectsEnabled="false"
+        android:tag="1"
+        android:text="CASUAL"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintBottom_toTopOf="@+id/descLbl2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descLbl1" />
+
+
+    <TextView
+        android:id="@+id/descLbl2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:gravity="center"
+        android:text="10 SECONDS BETWEEN QUESTIONS"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintBottom_toTopOf="@+id/forwardFromType2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forwardFromType1" />
+
+
+    <Button
+        android:id="@+id/forwardFromType2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="toSettings"
+        android:soundEffectsEnabled="false"
+        android:tag="2"
+        android:text="PRACTICE"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintBottom_toTopOf="@+id/descLbl3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descLbl2" />
+
+
+    <TextView
+        android:id="@+id/descLbl3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:gravity="center"
+        android:text="UNLIMITED TIME, NO POINTS"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintBottom_toTopOf="@+id/backFromType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forwardFromType2" />
+
+
+    <Button
+        android:id="@+id/backFromType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_36sdp"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="backToStart"
+        android:soundEffectsEnabled="false"
+        android:text="BACK"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descLbl3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

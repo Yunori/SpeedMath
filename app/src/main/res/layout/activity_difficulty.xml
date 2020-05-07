@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/difficultyLayout"
+    android:background="@android:color/holo_blue_light">
+
+
+    <ToggleButton
+        android:id="@+id/diff1Toggle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_blue_dark"
+        android:gravity="center"
+        android:onClick="changeDifficulty"
+        android:soundEffectsEnabled="false"
+        android:text="ToggleButton"
+        android:textColor="@android:color/background_light"
+        android:textOff="EASY"
+        android:textOn="EASY"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/diff2Toggle"/>
+
+
+    <ToggleButton
+        android:id="@+id/diff2Toggle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_blue_dark"
+        android:gravity="center"
+        android:onClick="changeDifficulty"
+        android:soundEffectsEnabled="false"
+        android:text="ToggleButton"
+        android:textColor="@android:color/background_light"
+        android:textOff="INTERMEDIATE"
+        android:textOn="INTERMEDIATE"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintBottom_toTopOf="@+id/diff3Toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diff1Toggle" />
+
+
+    <ToggleButton
+        android:id="@+id/diff3Toggle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_blue_dark"
+        android:gravity="center"
+        android:onClick="changeDifficulty"
+        android:soundEffectsEnabled="false"
+        android:text="ToggleButton"
+        android:textColor="@android:color/background_light"
+        android:textOff="CHALLENGING"
+        android:textOn="CHALLENGING"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintBottom_toTopOf="@+id/diff4Toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diff2Toggle" />
+
+
+    <ToggleButton
+        android:id="@+id/diff4Toggle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_blue_dark"
+        android:gravity="center"
+        android:onClick="changeDifficulty"
+        android:soundEffectsEnabled="false"
+        android:text="ToggleButton"
+        android:textColor="@android:color/background_light"
+        android:textOff="ADVANCED"
+        android:textOn="ADVANCED"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintBottom_toTopOf="@+id/diff5Toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diff3Toggle" />
+
+
+    <ToggleButton
+        android:id="@+id/diff5Toggle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_blue_dark"
+        android:gravity="center"
+        android:onClick="changeDifficulty"
+        android:soundEffectsEnabled="false"
+        android:text="ToggleButton"
+        android:textColor="@android:color/background_light"
+        android:textOff="EXTREME"
+        android:textOn="EXTREME"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintBottom_toTopOf="@+id/diffcultyBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diff4Toggle" />
+
+
+    <Button
+        android:id="@+id/diffcultyBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="toSettings"
+        android:soundEffectsEnabled="false"
+        android:text="BACK"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_24ssp"
+        android:layout_marginBottom="@dimen/_28sdp"
+        android:layout_marginTop="@dimen/_28sdp"
+        app:layout_constraintTop_toBottomOf="@+id/diff5Toggle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/startGameBtn"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/startGameBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="startGame"
+        android:soundEffectsEnabled="false"
+        android:text="START"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintStart_toEndOf="@+id/diffcultyBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/diffcultyBack"
+        app:layout_constraintBottom_toBottomOf="@+id/diffcultyBack" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

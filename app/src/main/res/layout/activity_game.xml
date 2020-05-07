@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light">
+
+    <TextView
+        android:id="@+id/gameScore"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="SCORE  0"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/correctCounter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/definition" />
+
+    <TextView
+        android:id="@+id/correctCounter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="CORRECT  0"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintStart_toEndOf="@+id/gameScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gameScore"
+        app:layout_constraintBottom_toBottomOf="@+id/gameScore" />
+
+    <TextView
+        android:id="@+id/definition"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="ADDITION"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameScore"
+        app:layout_constraintBottom_toTopOf="@+id/expression" />
+
+
+    <TextView
+        android:id="@+id/expression"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="x + x"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_36ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/definition"
+        app:layout_constraintBottom_toTopOf="@+id/timeBar" />
+
+
+    <ProgressBar
+        android:id="@+id/timeBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:indeterminate="false"
+        android:max="1000"
+        android:progress="90"
+        android:progressTint="@android:color/holo_green_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expression"
+        app:layout_constraintBottom_toTopOf="@+id/option1" />
+
+
+    <Button
+        android:id="@+id/option1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:cornerRadius="0dp"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="option1Func"
+        android:soundEffectsEnabled="false"
+        android:text="Button"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/option2"
+        app:layout_constraintTop_toBottomOf="@+id/timeBar"
+        app:layout_constraintBottom_toTopOf="@+id/option3" />
+
+    <Button
+        android:id="@+id/option2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:cornerRadius="0dp"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="option2Func"
+        android:soundEffectsEnabled="false"
+        android:text="Button"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintStart_toEndOf="@+id/option1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/option1"
+        app:layout_constraintBottom_toBottomOf="@+id/option1" />
+
+
+    <Button
+        android:id="@+id/option3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:cornerRadius="0dp"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="option3Func"
+        android:soundEffectsEnabled="false"
+        android:text="Button"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/option4"
+        app:layout_constraintTop_toBottomOf="@+id/option1"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/option4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:cornerRadius="0dp"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="option4Func"
+        android:soundEffectsEnabled="false"
+        android:text="Button"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintStart_toEndOf="@+id/option3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/option3"
+        app:layout_constraintBottom_toBottomOf="@+id/option3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

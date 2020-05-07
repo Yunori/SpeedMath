@@ -1,0 +1,118 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/speedmath"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/xpBar" />
+
+    <TextView
+        android:id="@+id/lvlLbl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        android:gravity="center"
+        android:text="lvl"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_30ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/xpBar"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintBottom_toTopOf="@+id/highScoreLbl" />
+
+
+    <ProgressBar
+        android:id="@+id/xpBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="0.5"
+        android:progress="50"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        app:layout_constraintHorizontal_weight="2"
+        android:progressTint="@android:color/holo_green_light"
+        android:scaleY="5"
+        app:layout_constraintStart_toEndOf="@+id/lvlLbl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintBottom_toTopOf="@+id/highScoreLbl" />
+
+
+    <TextView
+        android:id="@+id/highScoreLbl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="0.5"
+        android:gravity="center"
+        android:text="HIGH SCORE 3456"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xpBar"
+        app:layout_constraintBottom_toTopOf="@+id/start" />
+
+
+    <ImageButton
+        android:id="@+id/start"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1"
+        android:background="@android:color/transparent"
+        android:onClick="startGame"
+        android:scaleType="fitCenter"
+        android:soundEffectsEnabled="false"
+        app:srcCompat="@drawable/play"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/stats"
+        app:layout_constraintTop_toBottomOf="@+id/highScoreLbl"
+        app:layout_constraintBottom_toTopOf="@+id/audioBtn" />
+
+    <ImageButton
+        android:id="@+id/stats"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1"
+        android:background="@android:color/transparent"
+        android:onClick="openStats"
+        android:scaleType="fitCenter"
+        android:soundEffectsEnabled="false"
+        app:srcCompat="@drawable/stats"
+        app:layout_constraintStart_toEndOf="@+id/start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/start"
+        app:layout_constraintBottom_toBottomOf="@+id/start" />
+
+
+    <ImageButton
+        android:id="@+id/audioBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="0.25"
+        android:background="@android:color/transparent"
+        android:onClick="audioFunc"
+        android:scaleType="fitCenter"
+        android:soundEffectsEnabled="false"
+        app:srcCompat="@drawable/audioon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

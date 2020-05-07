@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/settingsLayout"
+    android:background="@android:color/holo_blue_light">
+
+
+    <TextView
+        android:id="@+id/additionsLbl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="ADDITIONS"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/subtractionLbl"
+        app:layout_constraintEnd_toStartOf="@+id/additionToggle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/additionToggle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_blue_dark"
+        android:gravity="center"
+        android:onClick="isToggleActive"
+        android:soundEffectsEnabled="false"
+        android:text="ToggleButton"
+        android:textColor="@android:color/background_light"
+        android:textOff="NO"
+        android:textOn="YES"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/additionsLbl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/additionsLbl"
+        app:layout_constraintTop_toTopOf="@+id/additionsLbl" />
+
+
+    <TextView
+        android:id="@+id/subtractionLbl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="SUBTRACTIONS"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/multiplicationsLbl"
+        app:layout_constraintEnd_toStartOf="@+id/subtractionToggle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/additionsLbl" />
+
+    <ToggleButton
+        android:id="@+id/subtractionToggle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_blue_dark"
+        android:gravity="center"
+        android:onClick="isToggleActive"
+        android:soundEffectsEnabled="false"
+        android:text="ToggleButton"
+        android:textColor="@android:color/background_light"
+        android:textOff="NO"
+        android:textOn="YES"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/subtractionLbl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/subtractionLbl"
+        app:layout_constraintTop_toTopOf="@+id/subtractionLbl" />
+
+
+    <TextView
+        android:id="@+id/multiplicationsLbl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="MULTIPLICATIONS"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/divisionsLbl"
+        app:layout_constraintEnd_toStartOf="@+id/multiplicationToggle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtractionLbl" />
+
+    <ToggleButton
+        android:id="@+id/multiplicationToggle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_blue_dark"
+        android:gravity="center"
+        android:onClick="isToggleActive"
+        android:soundEffectsEnabled="false"
+        android:text="ToggleButton"
+        android:textColor="@android:color/background_light"
+        android:textOff="NO"
+        android:textOn="YES"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/multiplicationsLbl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/multiplicationsLbl"
+        app:layout_constraintTop_toTopOf="@+id/multiplicationsLbl" />
+
+
+    <TextView
+        android:id="@+id/divisionsLbl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_46sdp"
+        android:gravity="center"
+        android:text="DIVISIONS"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/settingsCancel"
+        app:layout_constraintEnd_toStartOf="@+id/divisionToggle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multiplicationsLbl" />
+
+    <ToggleButton
+        android:id="@+id/divisionToggle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_blue_dark"
+        android:gravity="center"
+        android:onClick="isToggleActive"
+        android:soundEffectsEnabled="false"
+        android:text="ToggleButton"
+        android:textColor="@android:color/background_light"
+        android:textOff="NO"
+        android:textOn="YES"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/divisionsLbl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/divisionsLbl"
+        app:layout_constraintTop_toTopOf="@+id/divisionsLbl" />
+
+
+    <Button
+        android:id="@+id/settingsCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_46sdp"
+        android:background="@android:color/holo_blue_dark"
+        android:gravity="center"
+        android:onClick="toMain"
+        android:soundEffectsEnabled="false"
+        android:text="BACK"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/settingsStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divisionsLbl" />
+
+    <Button
+        android:id="@+id/settingsStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="toDifficultyPage"
+        android:soundEffectsEnabled="false"
+        android:text="NEXT"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/settingsCancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/settingsCancel"
+        app:layout_constraintTop_toTopOf="@+id/settingsCancel" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

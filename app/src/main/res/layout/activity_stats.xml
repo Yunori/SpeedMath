@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light">
+
+    <TextView
+        android:id="@+id/statsTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="OVERALL PROGRESS"
+        android:textColor="@android:color/background_light"
+        android:background="@android:color/holo_blue_dark"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintBottom_toTopOf="@+id/statsHS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/statsHS"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="GAME OVER"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintBottom_toTopOf="@+id/statsTotalScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statsTitle" />
+
+
+    <TextView
+        android:id="@+id/statsTotalScore"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="GAME OVER"
+        android:textColor="@android:color/background_light"
+        android:background="@android:color/holo_blue_dark"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintBottom_toTopOf="@+id/statsTotalCorrect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statsHS" />
+
+    <TextView
+        android:id="@+id/statsTotalCorrect"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="GAME OVER"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintBottom_toTopOf="@+id/statsGames"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statsTotalScore" />
+
+    <TextView
+        android:id="@+id/statsGames"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="GAME OVER"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_18ssp"
+        android:background="@android:color/holo_blue_dark"
+        app:layout_constraintBottom_toTopOf="@+id/toMainBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statsTotalCorrect" />
+
+    <Button
+        android:id="@+id/toMainBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="toMain"
+        android:soundEffectsEnabled="false"
+        android:text="DONE"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statsGames" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
